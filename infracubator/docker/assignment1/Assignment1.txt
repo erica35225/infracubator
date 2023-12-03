@@ -1,0 +1,15 @@
+1. Start a nginx container
+2. port forward to local and check
+   docker run -p 8080:80 -d nginx
+
+2. Check logs
+   docker logs <container-id>
+
+3. Go inside the container
+   docker exec -it <container-id> /bin/bash
+
+4. Stop the container
+   docker stop <container-id>
+
+   Note - In order to get the <container-id>
+   docker ps

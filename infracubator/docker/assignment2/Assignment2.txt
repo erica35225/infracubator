@@ -1,0 +1,16 @@
+1. create a docker image with the base image of `golang:latest` and Tag the docker image with v1.
+   dockerfile - check the same directory
+   docker build -t erica7036/go-app:v1 .
+
+2. Run a container with that image
+   docker run -p 8080:8080 -d erica7036/go-app:v1
+
+3. curl request to see the output ( i:e hello )
+   curl localhost:8080
+
+4. Run docker history, observe and understand the output.
+   docker history erica7036/go-app:v1
+
+5. Push the docker image to your docker hub.
+   docker login
+   docker push erica7036/go-app:v1

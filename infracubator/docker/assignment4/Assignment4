@@ -1,0 +1,25 @@
+1. create a volume and call it my_volume
+   docker volume create my_volume
+   list the volume
+   docker volume ls
+
+2. Create a container and attach my_volume.
+   docker run -d -v my_volume:/app --name container1 busybox tail -f /dev/null
+
+3. Add a file
+   docker exec container1 sh -c 'echo "this is dummy data." > /app/dummy.txt'
+
+4. Verify the data in the file.
+   docker exec container1 echo /app/dummy.txt
+   note: It should print the string - this is dummy data.
+
+5. Stop the container
+   docker stop container1
+
+6. Create an another container and attach the created my_volume to it.
+   docker run -d -v my_volume:/app --name container2 busybox tail -f /dev/null
+
+7. verify the content of the file
+   docker exec container2 echo /app/dummy.txt
+
+
