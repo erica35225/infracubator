@@ -1,0 +1,10 @@
+# Run stage
+
+1. build an image using given dockerfile in the same directory.
+   docker build -t go-app .
+
+2. Run the image
+   docker run -d -p 8080:8080 go-app
+
+3. Make a curl request and verify the output
+   curl localhost:8080

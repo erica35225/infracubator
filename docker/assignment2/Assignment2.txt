@@ -1,3 +1,5 @@
+# Build and push
+
 1. create a docker image with the base image of `golang:latest` and Tag the docker image with v1.
    dockerfile - check the same directory
    docker build -t erica7036/go-app:v1 .

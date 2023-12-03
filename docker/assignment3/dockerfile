@@ -1,0 +1,3 @@
+FROM erica7036/go-app:v1
+
+EXPOSE 8080
